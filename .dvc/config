@@ -1,0 +1,5 @@
+[core]
+    remote = bucket_mlops
+['remote "bucket_mlops"']
+    url = gs://bucket_lab_mlops
+    credentialpath = /Users/dheeraj/Downloads/airflow-github-0cbedb1994fc.json
