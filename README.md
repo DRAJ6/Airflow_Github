@@ -1,6 +1,6 @@
 # Advertising Click Prediction
 
-This Markdown document provides an overview of a Python script used to build and evaluate a logistic regression model for predicting whether a user will click on an advertisement. The script includes data loading, preprocessing, model building, and evaluation.
+This lab provides an overview of a Python script used to build and evaluate a logistic regression model for predicting whether a user will click on an advertisement. The script includes data loading, preprocessing, model building, and evaluation. This lab is designed to run locally on Apache Airflow
 
 ## Overview
 This Python script is designed to perform the following tasks:
@@ -36,7 +36,7 @@ Scaling numerical features using MinMaxScaler and StandardScaler.
 Combining feature transformations using a column transformer.
 Splitting the data into training and testing sets.
 ### Model Building
-A logistic regression model is created and hyperparameter tuning is performed using grid search with cross-validation. Hyperparameters considered include penalty, C, class weight, and solver.
+A logistic regression model is created and hyperparameter tuning is performed using grid search with cross-validation. Hyperparameters considered include penalty, C, class weight, and solver. The built model will stored locally in the model folder.
 
 ### Model Evaluation
 The trained logistic regression model is loaded, evaluated on the testing data, and the model's accuracy on the test set is printed.
