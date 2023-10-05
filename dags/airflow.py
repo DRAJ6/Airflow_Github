@@ -69,7 +69,7 @@ separate_data_outputs_task = PythonOperator(
 build_save_model_task = PythonOperator(
     task_id='build_save_model_task',
     python_callable=build_model,
-    op_args=[separate_data_outputs_task.output, "model3.sav"],  # Pass the output of 'separate_data_outputs_task'
+    op_args=[separate_data_outputs_task.output, "model.sav"],  # Pass the output of 'separate_data_outputs_task'
     provide_context=True,
     dag=dag,
 )
@@ -78,7 +78,7 @@ build_save_model_task = PythonOperator(
 load_model_task = PythonOperator(
     task_id='load_model_task',
     python_callable=load_model,
-    op_args=[separate_data_outputs_task.output, "model3.sav"],  # Pass the output of 'separate_data_outputs_task'
+    op_args=[separate_data_outputs_task.output, "model.sav"],  # Pass the output of 'separate_data_outputs_task'
     dag=dag,
 )
 

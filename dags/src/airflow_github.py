@@ -76,16 +76,17 @@ def build_model(data, filename):
     # Create and train a logistic regression model with the best parameters
     lr_clf = LogisticRegression(**best_params)
     lr_clf.fit(X_train, y_train)
+    output_path = os.path.join(os.path.dirname(__file__), "../model", filename)
 
     # Save the trained model to a file
-    pickle.dump(lr_clf, open(filename, 'wb'))
+    pickle.dump(lr_clf, open(output_path, 'wb'))
 
 # Load a saved logistic regression model and evaluate it
 def load_model(data, filename):
     X_train, X_test, y_train, y_test = data
-
+    output_path = os.path.join(os.path.dirname(__file__), "../model", filename)
     # Load the saved model from a file
-    loaded_model = pickle.load(open(filename, 'rb'))
+    loaded_model = pickle.load(open(output_path, 'rb'))
 
     # Make predictions on the test data and print the model's score
     predictions = loaded_model.predict(X_test)

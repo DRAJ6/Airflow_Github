@@ -1,0 +1,69 @@
+[2023-10-05T17:03:31.775+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Airflow-GitHub.separate_data_outputs_task manual__2023-10-05T17:03:25.432209+00:00 [queued]>
+[2023-10-05T17:03:31.788+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Airflow-GitHub.separate_data_outputs_task manual__2023-10-05T17:03:25.432209+00:00 [queued]>
+[2023-10-05T17:03:31.788+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-05T17:03:31.789+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-10-05T17:03:31.789+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-05T17:03:31.798+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): separate_data_outputs_task> on 2023-10-05 17:03:25.432209+00:00
+[2023-10-05T17:03:31.805+0000] {standard_task_runner.py:55} INFO - Started process 153 to run task
+[2023-10-05T17:03:31.809+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Airflow-GitHub', 'separate_data_outputs_task', 'manual__2023-10-05T17:03:25.432209+00:00', '--job-id', '350', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpwj5p1d48']
+[2023-10-05T17:03:31.810+0000] {standard_task_runner.py:83} INFO - Job 350: Subtask separate_data_outputs_task
+[2023-10-05T17:03:31.906+0000] {task_command.py:388} INFO - Running <TaskInstance: Airflow-GitHub.separate_data_outputs_task manual__2023-10-05T17:03:25.432209+00:00 [running]> on host 38f4e1e9bdb5
+[2023-10-05T17:03:31.963+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Dheeraj
+AIRFLOW_CTX_DAG_ID=Airflow-GitHub
+AIRFLOW_CTX_TASK_ID=separate_data_outputs_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-10-05T17:03:25.432209+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-10-05T17:03:25.432209+00:00
+[2023-10-05T17:03:31.975+0000] {python.py:177} INFO - Done. Returned value was: (array([[ 0.73176951,  0.47619048,  0.76387767, ...,  0.6842786 ,
+         1.52106049,  1.04381619],
+       [ 0.22845487,  0.30952381,  0.78645239, ...,  0.79385516,
+        -0.75764596, -0.95802308],
+       [ 0.62587115,  0.14285714,  0.7908996 , ...,  0.81544168,
+         0.73429367, -0.95802308],
+       ...,
+       [ 0.99898011,  0.61904762,  0.57909566, ..., -0.21264408,
+         0.0339071 ,  1.04381619],
+       [ 0.40897501,  0.54761905,  0.89615916, ...,  1.32636636,
+        -0.95137476, -0.95802308],
+       [ 0.97416284,  0.5       ,  0.69626269, ...,  0.35607887,
+         0.29783409, -0.95802308]]), array([[ 5.21162672e-01,  2.38095238e-01,  6.22872635e-01, ...,
+        -1.52805508e-04, -1.38350393e+00,  1.04381619e+00],
+       [ 6.56637770e-01,  7.85714286e-01,  4.20300725e-01, ...,
+        -9.83426752e-01, -1.33495777e+00, -9.58023079e-01],
+       [ 1.87489376e-01,  4.52380952e-01,  7.29300043e-01, ...,
+         5.16440523e-01, -1.04641583e+00,  1.04381619e+00],
+       ...,
+       [ 4.74757777e-01,  2.38095238e-01,  6.52986564e-01, ...,
+         1.46018703e-01, -1.31923155e+00, -9.58023079e-01],
+       [ 5.67737549e-01,  6.90476190e-01,  1.61812568e-01, ...,
+        -2.23811538e+00, -1.12595859e+00,  1.04381619e+00],
+       [ 9.41356451e-01,  4.52380952e-01,  6.51125316e-01, ...,
+         1.36984295e-01,  9.33264534e-01,  1.04381619e+00]]), 541    0
+440    1
+482    0
+422    1
+778    1
+      ..
+106    0
+270    1
+860    1
+435    1
+102    0
+Name: Clicked on Ad, Length: 700, dtype: int64, 521    1
+737    1
+740    1
+660    1
+411    0
+      ..
+468    1
+935    0
+428    1
+7      1
+155    0
+Name: Clicked on Ad, Length: 300, dtype: int64)
+[2023-10-05T17:03:32.006+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=Airflow-GitHub, task_id=separate_data_outputs_task, execution_date=20231005T170325, start_date=20231005T170331, end_date=20231005T170332
+[2023-10-05T17:03:32.022+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-10-05T17:03:32.041+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
