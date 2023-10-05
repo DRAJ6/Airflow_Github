@@ -31,7 +31,8 @@ jobs:
       run: airflow db init
 
     - name: Start Airflow Webserver
-      run: airflow webserver --port 8080
+      run: airflow webserver --port 8080 --host localhost
+
 
     - name: Start Airflow Scheduler
       run: airflow scheduler
