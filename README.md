@@ -43,7 +43,7 @@ The trained logistic regression model is loaded, evaluated on the testing data, 
 
 
 ## DAG
-This Python script defines an Apache Airflow DAG (Directed Acyclic Graph) named 'Airflow-GitHub' that automates a data processing and machine learning workflow. It utilizes PythonOperators to execute various tasks sequentially.
+This Python script defines an Apache Airflow DAG (Directed Acyclic Graph) named 'Airflow-GitHub' that automates a data processing and machine learning workflow. It utilizes Python Operators to execute various tasks sequentially.
 
 #### Import Necessary Libraries and Modules:
 
