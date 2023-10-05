@@ -1,0 +1,48 @@
+[2023-09-17T21:29:52.394+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: your_python_dag.build_save_model_task manual__2023-09-17T21:29:44.637349+00:00 [queued]>
+[2023-09-17T21:29:52.403+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: your_python_dag.build_save_model_task manual__2023-09-17T21:29:44.637349+00:00 [queued]>
+[2023-09-17T21:29:52.403+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-17T21:29:52.403+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-09-17T21:29:52.404+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-17T21:29:52.411+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): build_save_model_task> on 2023-09-17 21:29:44.637349+00:00
+[2023-09-17T21:29:52.423+0000] {standard_task_runner.py:55} INFO - Started process 1147 to run task
+[2023-09-17T21:29:52.427+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'your_python_dag', 'build_save_model_task', 'manual__2023-09-17T21:29:44.637349+00:00', '--job-id', '126', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpuzicoxt7']
+[2023-09-17T21:29:52.429+0000] {standard_task_runner.py:83} INFO - Job 126: Subtask build_save_model_task
+[2023-09-17T21:29:52.490+0000] {task_command.py:388} INFO - Running <TaskInstance: your_python_dag.build_save_model_task manual__2023-09-17T21:29:44.637349+00:00 [running]> on host b55550b47356
+[2023-09-17T21:29:52.732+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=your_name
+AIRFLOW_CTX_DAG_ID=your_python_dag
+AIRFLOW_CTX_TASK_ID=build_save_model_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-17T21:29:44.637349+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-17T21:29:44.637349+00:00
+[2023-09-17T21:29:52.738+0000] {logging_mixin.py:137} INFO - <class 'pandas.core.frame.DataFrame'>
+[2023-09-17T21:29:52.739+0000] {logging_mixin.py:137} INFO - Index(['CUST_ID', 'BALANCE', 'BALANCE_FREQUENCY', 'PURCHASES',
+       'ONEOFF_PURCHASES', 'INSTALLMENTS_PURCHASES', 'CASH_ADVANCE',
+       'PURCHASES_FREQUENCY', 'ONEOFF_PURCHASES_FREQUENCY',
+       'PURCHASES_INSTALLMENTS_FREQUENCY', 'CASH_ADVANCE_FREQUENCY',
+       'CASH_ADVANCE_TRX', 'PURCHASES_TRX', 'CREDIT_LIMIT', 'PAYMENTS',
+       'MINIMUM_PAYMENTS', 'PRC_FULL_PAYMENT', 'TENURE'],
+      dtype='object')
+[2023-09-17T21:29:52.750+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/src/lab2.py", line 64, in build_save_model
+    kmeans.fit(df)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/cluster/_kmeans.py", line 1143, in fit
+    accept_large_sparse=False,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/base.py", line 566, in _validate_data
+    X = check_array(X, **check_params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/utils/validation.py", line 746, in check_array
+    array = np.asarray(array, order=order, dtype=dtype)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 1993, in __array__
+    return np.asarray(self._values, dtype=dtype)
+ValueError: could not convert string to float: 'C10001'
+[2023-09-17T21:29:52.765+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=your_python_dag, task_id=build_save_model_task, execution_date=20230917T212944, start_date=20230917T212952, end_date=20230917T212952
+[2023-09-17T21:29:52.771+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 126 for task build_save_model_task (could not convert string to float: 'C10001'; 1147)
+[2023-09-17T21:29:52.801+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-09-17T21:29:52.816+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

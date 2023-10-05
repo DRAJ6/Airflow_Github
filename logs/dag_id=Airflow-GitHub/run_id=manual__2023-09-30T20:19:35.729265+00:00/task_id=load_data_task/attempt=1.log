@@ -1,0 +1,37 @@
+[2023-09-30T20:19:37.986+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Airflow-GitHub.load_data_task manual__2023-09-30T20:19:35.729265+00:00 [queued]>
+[2023-09-30T20:19:38.000+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Airflow-GitHub.load_data_task manual__2023-09-30T20:19:35.729265+00:00 [queued]>
+[2023-09-30T20:19:38.001+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-30T20:19:38.001+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-09-30T20:19:38.002+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-30T20:19:38.017+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): load_data_task> on 2023-09-30 20:19:35.729265+00:00
+[2023-09-30T20:19:38.029+0000] {standard_task_runner.py:55} INFO - Started process 344 to run task
+[2023-09-30T20:19:38.034+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Airflow-GitHub', 'load_data_task', 'manual__2023-09-30T20:19:35.729265+00:00', '--job-id', '276', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmp264su3n8']
+[2023-09-30T20:19:38.036+0000] {standard_task_runner.py:83} INFO - Job 276: Subtask load_data_task
+[2023-09-30T20:19:38.137+0000] {task_command.py:388} INFO - Running <TaskInstance: Airflow-GitHub.load_data_task manual__2023-09-30T20:19:35.729265+00:00 [running]> on host 4b91a1d2327d
+[2023-09-30T20:19:38.205+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Dheeraj
+AIRFLOW_CTX_DAG_ID=Airflow-GitHub
+AIRFLOW_CTX_TASK_ID=load_data_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-30T20:19:35.729265+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-30T20:19:35.729265+00:00
+[2023-09-30T20:19:38.221+0000] {logging_mixin.py:137} INFO - finished 1
+[2023-09-30T20:19:38.221+0000] {python.py:177} INFO - Done. Returned value was:      Daily Time Spent on Site  Age  ...            Timestamp  Clicked on Ad
+0                       68.95   35  ...  2016-03-27 00:53:11              0
+1                       80.23   31  ...  2016-04-04 01:39:02              0
+2                       69.47   26  ...  2016-03-13 20:35:42              0
+3                       74.15   29  ...  2016-01-10 02:31:19              0
+4                       68.37   35  ...  2016-06-03 03:36:18              0
+..                        ...  ...  ...                  ...            ...
+995                     72.97   30  ...  2016-02-11 21:49:00              1
+996                     51.30   45  ...  2016-04-22 02:07:01              1
+997                     51.63   51  ...  2016-02-01 17:24:57              1
+998                     55.55   19  ...  2016-03-24 02:35:54              0
+999                     45.01   26  ...  2016-06-03 21:43:21              1
+
+[1000 rows x 10 columns]
+[2023-09-30T20:19:38.278+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=Airflow-GitHub, task_id=load_data_task, execution_date=20230930T201935, start_date=20230930T201937, end_date=20230930T201938
+[2023-09-30T20:19:38.339+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-09-30T20:19:38.380+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

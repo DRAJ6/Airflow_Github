@@ -1,0 +1,30 @@
+[2023-09-30T20:16:45.718+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: your_python_dag.build_save_model_task manual__2023-09-30T20:16:37.861353+00:00 [queued]>
+[2023-09-30T20:16:45.723+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: your_python_dag.build_save_model_task manual__2023-09-30T20:16:37.861353+00:00 [queued]>
+[2023-09-30T20:16:45.724+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-30T20:16:45.724+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-09-30T20:16:45.724+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-30T20:16:45.731+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): build_save_model_task> on 2023-09-30 20:16:37.861353+00:00
+[2023-09-30T20:16:45.737+0000] {standard_task_runner.py:55} INFO - Started process 172 to run task
+[2023-09-30T20:16:45.740+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'your_python_dag', 'build_save_model_task', 'manual__2023-09-30T20:16:37.861353+00:00', '--job-id', '275', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmp3_vfnsoc']
+[2023-09-30T20:16:45.742+0000] {standard_task_runner.py:83} INFO - Job 275: Subtask build_save_model_task
+[2023-09-30T20:16:45.793+0000] {task_command.py:388} INFO - Running <TaskInstance: your_python_dag.build_save_model_task manual__2023-09-30T20:16:37.861353+00:00 [running]> on host 4b91a1d2327d
+[2023-09-30T20:16:45.870+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=your_name
+AIRFLOW_CTX_DAG_ID=your_python_dag
+AIRFLOW_CTX_TASK_ID=build_save_model_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-30T20:16:37.861353+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-30T20:16:37.861353+00:00
+[2023-09-30T20:16:45.871+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: build_model() missing 3 required positional arguments: 'y_train', 'y_test', and 'filename'
+[2023-09-30T20:16:45.880+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=your_python_dag, task_id=build_save_model_task, execution_date=20230930T201637, start_date=20230930T201645, end_date=20230930T201645
+[2023-09-30T20:16:45.889+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 275 for task build_save_model_task (build_model() missing 3 required positional arguments: 'y_train', 'y_test', and 'filename'; 172)
+[2023-09-30T20:16:45.913+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-09-30T20:16:45.932+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
