@@ -26,6 +26,11 @@ This Python script is designed to perform the following tasks:
 - load_model(data, filename): Loads a saved logistic regression model, evaluates it on test data, and prints the model's score.
 
 ### Data Loading
+
+Use the below command to fetch the data from the Google Cloud storage which can reflect the updated version of the data. The data will be fetched from the cloud and stored in the data folder.
+```commandline
+dvc fetch
+```
 The script loads the advertising data from a CSV file named "advertising.csv" located in the "../data" directory.
 
 ### Data Preprocessing
