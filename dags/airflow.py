@@ -5,14 +5,13 @@ from datetime import datetime, timedelta
 from src.airflow_github import load_data, data_preprocessing, build_model, load_model
 from airflow import configuration as conf
 
+
 # Define the GitHub repository, owner, and endpoint
-github_repo = "DRAJ6/Airflow-GitHub"
+github_repo = "DRAJ6/Airflow_Github"
 owner, repo = github_repo.split('/')
 endpoint = "repos/{}/{}/issues".format(owner, repo)
 endpoint = "issues"
 
-# Define your GitHub token for authentication
-token = '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'
 
 # Enable pickle support for XCom, allowing data to be passed between tasks
 conf.set('core', 'enable_xcom_pickling', 'True')
@@ -26,7 +25,7 @@ default_args = {
 
 # Create a DAG instance named 'Airflow-GitHub' with the defined default arguments
 dag = DAG(
-    'Airflow-GitHub',
+    'Airflow-GitHub_Test',
     default_args=default_args,
     description='Airflow-GitHub DAG Description',
     schedule_interval=None,  # Set the schedule interval or use None for manual triggering
@@ -39,6 +38,7 @@ dag = DAG(
 load_data_task = PythonOperator(
     task_id='load_data_task',
     python_callable=load_data,
+    op_args=[],
     provide_context=True,
     dag=dag,
 )
