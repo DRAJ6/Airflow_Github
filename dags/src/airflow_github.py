@@ -8,7 +8,6 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import LogisticRegression
 from src.gitlog import create_github_issue
 
-# token = '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'
 
 # Load data from a CSV file
 def load_data():
