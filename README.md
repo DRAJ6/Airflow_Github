@@ -73,11 +73,11 @@ An Apache Airflow connection is used to store external system credentials, such 
 
 Fill in Connection Details:
 
-Conn Id: Choose a unique identifier for the connection, e.g., "my_database_conn."
-Conn Type: Select the type of connection, such as "SSH" or "HTTP" based on your use case.
-Host: Enter the host or endpoint of the external system you're connecting to.
-Login: Provide the login or username required to access the GitHub.
-Password: Input the password or access token for authentication.
+- Conn Id: Choose a unique identifier for the connection, e.g., "my_database_conn."
+- Conn Type: Select the type of connection, such as "SSH" or "HTTP" based on your use case.
+- Host: Enter the host or endpoint of the external system you're connecting to.
+- Login: Provide the login or username required to access the GitHub.
+- Password: Input the password or access token for authentication.
 
 Save the Connection: If the connection test is successful, click the "Save" button to save the connection.
 
