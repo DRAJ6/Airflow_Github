@@ -59,6 +59,10 @@ Set up configurations for Airflow, such as enabling XCom pickling for passing da
 Specify the GitHub repository ('github_repo') you want to work with.
 Extract the owner and repo name from the repository URL.
 
+#### Define GitHub Token:
+
+Set your GitHub token ('token') for authentication. Make sure it has the necessary permissions to interact with the repository.
+
 #### Creating an Apache Airflow Connection
 An Apache Airflow connection is used to store external system credentials, such as database connections, API keys, or cloud service credentials. 
 
@@ -80,10 +84,6 @@ Fill in Connection Details:
 - Password: Input the password or access token for authentication.
 
 Save the Connection: If the connection test is successful, click the "Save" button to save the connection.
-
-#### Define GitHub Token:
-
-Set your GitHub token ('token') for authentication. Make sure it has the necessary permissions to interact with the repository.
 #### Define Default Arguments:
 
 Define default arguments for the DAG, including the owner, start date, and the number of retries in case of task failure.
