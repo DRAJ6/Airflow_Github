@@ -38,7 +38,6 @@ dag = DAG(
 load_data_task = PythonOperator(
     task_id='load_data_task',
     python_callable=load_data,
-    op_args=[],
     provide_context=True,
     dag=dag,
 )
