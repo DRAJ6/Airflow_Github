@@ -58,6 +58,29 @@ Set up configurations for Airflow, such as enabling XCom pickling for passing da
 
 Specify the GitHub repository ('github_repo') you want to work with.
 Extract the owner and repo name from the repository URL.
+
+#### Creating an Apache Airflow Connection
+An Apache Airflow connection is used to store external system credentials, such as database connections, API keys, or cloud service credentials. 
+
+- Access the Airflow Web UI: Open your web browser and navigate to the Apache Airflow web interface.
+- Login: Log in to the Airflow web interface using your credentials.
+
+- Navigate to Admin: In the Airflow web interface, click on the "Admin" tab in the top navigation menu.
+
+- Choose Connections: Under the "Connections" section in the "Admin" tab, click on "Connections."
+
+- Add a New Connection: Click the "Create" button to add a new connection.
+
+Fill in Connection Details:
+
+Conn Id: Choose a unique identifier for the connection, e.g., "my_database_conn."
+Conn Type: Select the type of connection, such as "SSH" or "HTTP" based on your use case.
+Host: Enter the host or endpoint of the external system you're connecting to.
+Login: Provide the login or username required to access the GitHub.
+Password: Input the password or access token for authentication.
+
+Save the Connection: If the connection test is successful, click the "Save" button to save the connection.
+
 #### Define GitHub Token:
 
 Set your GitHub token ('token') for authentication. Make sure it has the necessary permissions to interact with the repository.
